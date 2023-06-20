@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(),"hello toast",Toast.LENGTH_SHORT).show();
             }
         });
+        counter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer numero = Integer.parseInt(textView.getText().toString());
+                numero++;
+                textView.setText(numero.toString());
+            }
+        });
     }
 
 }
